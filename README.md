@@ -63,12 +63,12 @@ MoneyTrack Mobile follows a layered, feature-driven architecture. The client app
 
 ```mermaid
 graph TD
-    User([User]) -->|Interacts| UI[Flutter Mobile App<br/>(GoRouter & UI Widgets)]
-    UI -->|Auth & Queries| SupabaseSDK[Supabase Flutter SDK]
-    SupabaseSDK -->|REST / Realtime / RPC| SupabaseCloud[Supabase Backend Cloud]
-    SupabaseCloud -->|Executes Triggers| Postgres[(PostgreSQL Database)]
-    Postgres -->|Auto-updates Balance| AccountsTable[(accounts table)]
-    Postgres -->|Records Ledger| TxTable[(transactions table)]
+    User(["User"]) -->|Interacts| UI["Flutter Mobile App<br/>(GoRouter & UI Widgets)"]
+    UI -->|Auth & Queries| SupabaseSDK["Supabase Flutter SDK"]
+    SupabaseSDK -->|REST / Realtime / RPC| SupabaseCloud["Supabase Backend Cloud"]
+    SupabaseCloud -->|Executes Triggers| Postgres[("PostgreSQL Database")]
+    Postgres -->|Auto-updates Balance| AccountsTable[("accounts table")]
+    Postgres -->|Records Ledger| TxTable[("transactions table")]
 ```
 
 ---
